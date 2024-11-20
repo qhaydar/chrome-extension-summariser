@@ -1,0 +1,23 @@
+# Chrome Extension Summariser
+node_modules/
+.DS_Store
+.env
+*.log
+.vscode/
+.idea/
+dist/
+build/
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.pytest_cache/
+venv/
+env/
+
+# API Keys (never commit!)
+.env.local
+.env.*.local
