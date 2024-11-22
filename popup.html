@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Text Summarizer</h1>
+        </header>
+
+        <!-- API Key Section -->
+        <div class="api-key-section" id="apiKeySection">
+            <label for="apiKey">OpenAI API Key:</label>
+            <div class="input-group">
+                <input type="password" id="apiKey" placeholder="sk-..." autocomplete="off" />
+                <button id="saveApiKey" class="btn btn-primary">Save</button>
+            </div>
+            <p class="help-text">
+                <a href="https://platform.openai.com/api-keys" target="_blank">Get your API key</a>
+            </p>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="summary-section" id="summarySection" style="display: none;">
+            <div class="status-bar">
+                <span id="statusText">Ready</span>
+                <button id="clearApiKey" class="btn-link">Change API Key</button>
+            </div>
+
+            <div class="summary-container">
+                <div id="loadingState" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Generating summary...</p>
+                </div>
+
+                <div id="summaryContent" style="display: none;">
+                    <h3>Summary</h3>
+                    <div id="summaryText" class="summary-text"></div>
+                    <button id="copyButton" class="btn btn-secondary">
+                        📋 Copy to Clipboard
+                    </button>
+                </div>
+
+                <div id="errorState" class="error" style="display: none;">
+                    <p id="errorText"></p>
+                </div>
+
+                <div id="instructionState" class="instruction">
+                    <p>💡 Highlight text on any webpage, then click this extension to generate a summary.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/utils.js"></script>
+    <script src="src/popup.js"></script>
+</body>
+
+</html>
