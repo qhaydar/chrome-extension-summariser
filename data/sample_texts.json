@@ -1,0 +1,57 @@
+{
+    "samples": [
+        {
+            "id": 1,
+            "title": "Short Article - Climate Change",
+            "text": "Climate change is one of the most pressing issues facing humanity today. Rising global temperatures are causing ice caps to melt, sea levels to rise, and weather patterns to become more extreme. Scientists agree that human activities, particularly the burning of fossil fuels, are the primary drivers of this change. Immediate action is needed to reduce carbon emissions and transition to renewable energy sources to mitigate the worst effects of climate change.",
+            "expected_summary": "Climate change, driven primarily by human fossil fuel consumption, is causing rising temperatures, melting ice caps, and extreme weather. Scientists emphasize the urgent need to reduce carbon emissions and adopt renewable energy to prevent catastrophic consequences."
+        },
+        {
+            "id": 2,
+            "title": "Medium Article - Artificial Intelligence",
+            "text": "Artificial Intelligence (AI) has rapidly evolved from a theoretical concept to a practical technology that impacts nearly every aspect of modern life. Machine learning algorithms now power everything from recommendation systems on streaming platforms to autonomous vehicles navigating city streets. Natural language processing enables virtual assistants to understand and respond to human speech with increasing accuracy. Computer vision allows machines to interpret and analyze visual information, revolutionizing fields like medical imaging and security. However, the rapid advancement of AI also raises important ethical questions about privacy, job displacement, and the potential for algorithmic bias. As AI continues to develop, society must grapple with how to harness its benefits while mitigating its risks. Researchers and policymakers are working to establish guidelines and regulations that ensure AI is developed and deployed responsibly. The future of AI holds immense promise, but realizing that promise requires careful consideration of its societal implications.",
+            "expected_summary": "AI has transformed from theory to practice, powering technologies like recommendation systems, autonomous vehicles, and virtual assistants across various industries. While offering tremendous benefits, AI raises ethical concerns about privacy, job loss, and bias, requiring careful regulation and responsible development to balance innovation with societal impact."
+        },
+        {
+            "id": 3,
+            "title": "Long Article - Space Exploration",
+            "text": "Space exploration has captivated human imagination for centuries, but it was only in the mid-20th century that we developed the technology to venture beyond Earth's atmosphere. The Space Race between the United States and the Soviet Union led to remarkable achievements, including the first human in space, Yuri Gagarin, in 1961, and the first moon landing by Neil Armstrong and Buzz Aldrin in 1969. These early missions demonstrated that space travel was possible and inspired generations of scientists and engineers. In recent decades, space exploration has evolved significantly. Government space agencies like NASA, ESA, and JAXA continue to push the boundaries of what's possible, sending probes to distant planets, landing rovers on Mars, and studying the origins of the universe through powerful telescopes. Meanwhile, private companies like SpaceX, Blue Origin, and Virgin Galactic have entered the arena, making space more accessible and driving down costs through innovation. The International Space Station serves as a testament to international cooperation, hosting astronauts from multiple countries who conduct experiments in microgravity. Looking forward, humanity has ambitious plans for space exploration. Mars colonization is no longer just science fiction, with multiple missions planned to establish a permanent human presence on the Red Planet. Asteroid mining could provide valuable resources and reduce the strain on Earth's finite materials. Space tourism is becoming a reality, offering ordinary citizens the chance to experience weightlessness and see Earth from orbit. However, space exploration also faces challenges, including the high costs, technical difficulties, and the need to address space debris and planetary protection. As we venture further into the cosmos, we must do so responsibly, ensuring that we preserve the space environment for future generations.",
+            "expected_summary": "Space exploration has progressed from the Cold War Space Race achievements to modern collaborations between government agencies and private companies, with the ISS exemplifying international cooperation. Future ambitions include Mars colonization, asteroid mining, and space tourism, though challenges like costs, technical hurdles, and space debris management must be addressed responsibly."
+        },
+        {
+            "id": 4,
+            "title": "Technical Documentation - API Usage",
+            "text": "To use the OpenAI API, you first need to obtain an API key from the OpenAI platform. Once you have your key, you can make HTTP POST requests to the API endpoint at https://api.openai.com/v1/chat/completions. The request must include your API key in the Authorization header as a Bearer token. The request body should be a JSON object containing the model name (such as 'gpt-3.5-turbo' or 'gpt-4'), an array of messages with role and content properties, and optional parameters like temperature and max_tokens to control the response. The API will return a JSON response containing the generated text in the choices array.",
+            "expected_summary": "To use OpenAI's API, obtain an API key and send POST requests to the chat completions endpoint with your key as a Bearer token. Include the model name, message array, and optional parameters in the JSON request body to receive generated text responses."
+        },
+        {
+            "id": 5,
+            "title": "News Article - Technology Breakthrough",
+            "text": "Researchers at a leading university have announced a breakthrough in quantum computing that could revolutionize the field. The team successfully demonstrated a new type of quantum bit, or qubit, that remains stable at higher temperatures than previously possible. Traditional quantum computers require extremely cold temperatures close to absolute zero, making them expensive and difficult to maintain. This new development could make quantum computers more practical and accessible for real-world applications. The researchers believe their discovery could accelerate the development of quantum computers capable of solving complex problems in cryptography, drug discovery, and climate modeling that are beyond the reach of classical computers.",
+            "expected_summary": "University researchers achieved a quantum computing breakthrough by creating qubits stable at higher temperatures, potentially eliminating the need for extreme cooling. This advancement could make quantum computers more practical and accessible for applications in cryptography, drug discovery, and climate modeling."
+        },
+        {
+            "id": 6,
+            "title": "Short Story Excerpt",
+            "text": "The old lighthouse stood alone on the rocky cliff, its paint peeling and windows cracked from decades of harsh coastal weather. Sarah had inherited it from her grandfather, along with a mysterious letter that spoke of a hidden treasure. As she climbed the spiral staircase, each step creaking under her weight, she wondered if the stories were true. At the top, she found a small room with a dusty desk and a locked drawer. Her grandfather's key fit perfectly, and inside she discovered not gold or jewels, but something far more valuable: a collection of his journals, filled with stories of the sea and lessons about life that she would treasure forever.",
+            "expected_summary": "Sarah inherited her grandfather's deteriorating lighthouse and a letter hinting at treasure. Upon exploring, she discovered his journals in a locked drawer, finding that the real treasure was his written stories and life lessons rather than material wealth."
+        }
+    ],
+    "test_cases": [
+        {
+            "scenario": "Empty text",
+            "input": "",
+            "expected_error": "Selected text is too short. Please select at least 10 characters."
+        },
+        {
+            "scenario": "Very short text",
+            "input": "Hello",
+            "expected_error": "Selected text is too short. Please select at least 10 characters."
+        },
+        {
+            "scenario": "Valid short text",
+            "input": "This is a test sentence that should be long enough to process.",
+            "expected_result": "success"
+        }
+    ]
+}
