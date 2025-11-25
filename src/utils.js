@@ -73,7 +73,7 @@ function sanitizeText(text) {
 
     return text
         .trim()
-        .replace(/\s+/g, ' ')  // Replace multiple spaces with single space
+        .replace(/[^\S\n]+/g, ' ')  // Replace multiple spaces (but not newlines) with single space
         .replace(/\n{3,}/g, '\n\n');  // Replace multiple newlines with double newline
 }
 
