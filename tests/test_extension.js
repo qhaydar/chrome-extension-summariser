@@ -158,7 +158,7 @@ function testTextSanitization() {
 
         return text
             .trim()
-            .replace(/\s+/g, ' ')
+            .replace(/[^\S\n]+/g, ' ')
             .replace(/\n{3,}/g, '\n\n');
     }
 
