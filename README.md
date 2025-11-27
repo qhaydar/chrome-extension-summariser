@@ -1,4 +1,4 @@
-# 📝 Text Summarizer - Chrome Extension
+# 📝 Text Summariser - Chrome Extension
 
 A powerful Chrome extension that uses OpenAI's GPT API to generate concise summaries of highlighted text on any webpage.
 
